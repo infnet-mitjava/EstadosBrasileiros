@@ -11,18 +11,21 @@
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Novo</title>
 </head>
 <body>
     
 
-   <h2>Adicionar Tarefa</h2>
+   <h2>Adicionar Estado</h2>
    <form action="<c:url value="/todos/add" />" method="post">
-      <label for="tarefa">Tarefa</label>
-      <input type="text" name="tarefa" id="tarefa" size="200">
+      <label for="name">Nome</label>
+      <input type="text" name="name" id="name" class="form-control">
+      <br/>
+      <label for="uf">UF</label>
+      <input type="text" name="uf" id="uf" class="form-control">
       <br/>
       
-      <input type="submit" value="Salvar">
+      <input type="submit"  class="btn btn-primary" value="Salvar">
            
       
       

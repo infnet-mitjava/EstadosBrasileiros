@@ -11,22 +11,20 @@
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>${estado.name}</title>
 </head>
 <body>
  
-   <h2>Editar Tarefa</h2>
+   <h2>Editar estado: ${estado.name}</h2>
    <form action="<c:url value="/todos/update" />" method="post">
-   
-      <input type="hidden" value="${todo.id}" name="id" > 
-      <label for="tarefa">Tarefa</label>
-      <input type="text" value="${todo.tarefa}" name="tarefa" id="tarefa" size="200">
+      <input type="hidden" value="${estado.id}" name="id" > 
+      <label for="name">nome</label>
+      <input type="text" value="${estado.name}" name="name" id="name" class="form-control">
       <br/>
-      
-      <input type="submit" value="Salvar">
-           
-      
-      
+       <label for="uf">uf</label>
+      <input type="text" value="${estado.uf}" name="uf" id="uf" class="form-control">
+      <br/>
+      <input type="submit" value="Salvar" class="btn btn-primary">
    </form>
 
 

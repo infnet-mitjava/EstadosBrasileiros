@@ -9,33 +9,33 @@
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Listagem</title>
 </head>
 <body>
 
   <div class="container" >
 	
-	<h2>Page List Todo</h2>
-	<h3><a href="<c:url value="/todos/form" />"  >Criar nova tarefa</a></h3>
+	<h4>Listagem de estados</h4>
+	<h3><a href="<c:url value="/todos/form" />" class="btn btn-primary">Novo +</a></h3>
 	
 	<table class="table" >
-	   <thead class="table-dark">
+	   <thead>
 		<tr>
-			<th>Tarefa</th>
-			<th>Status</th>
+			<th>Estado</th>
+			<th>UF</th>
 			<th>Ação</th>
 		</tr>
 	<thead>
 	<tbody>
-		<c:forEach var="todo" items="${listaTodos}" >
+		<c:forEach var="estado" items="${listaEstados}" >
 			<tr>
-				<td>${todo.tarefa}</td>
-				<td>${todo.pronto}</td>
+				<td>${estado.name}</td>
+				<td>${estado.uf}</td>
 	<td>
 	
-	<a href="<c:url value="/todos/edit/${todo.id}" />" >Edit</a>
+	<a href="<c:url value="/todos/edit/${estado.id}" />" class="btn btn-warning">Edit</a>
 	|
-	<a href="<c:url value="/todos/edit/${todo.id}" />" >Delete</a>
+	<a href="<c:url value="/todos/edit/${estado.id}" />" class="btn btn-danger">Delete</a>
 	
 	
 	</td>
