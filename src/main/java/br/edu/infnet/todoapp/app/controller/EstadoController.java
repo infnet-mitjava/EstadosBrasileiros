@@ -9,18 +9,19 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import br.edu.infnet.todoapp.app.model.Todo;
+import br.edu.infnet.todoapp.app.model.Estado;
+import br.edu.infnet.todoapp.app.services.EstadoService;
 
-
-public class TodoController {
-
-	@Autowired
-	private TodoService service;
+@Controller
+public class EstadoController {
 	
+	@Autowired
+	private EstadoService estadoService;
+
 	@RequestMapping(value = "/todos/list", method = RequestMethod.GET)
-	public String list(Model model) {
-		List<Todo> todos = service.getTodos();
-		model.addAttribute("listaTodos", todos);
+	public String listar(Model model) {
+		List<Estado> estados= estadoService.listar();
+		model.addAttribute("listaTodos", estados);
 		return "todos/list";
 	}
 	
@@ -31,30 +32,21 @@ public class TodoController {
 	
 	
 	@RequestMapping(value = "/todos/add", method = RequestMethod.POST)
-	public String save(Model model, Todo todo) {
-		service.persite(todo);
+	public String save(Model model, Estado estado) {
+		estadoService.salvar(estado);
 		return "redirect:/todos/list";
 	}
 	
 	@RequestMapping(value = "/todos/edit/{id}", method = RequestMethod.GET)
-	public String edit(@PathVariable("id") String id, Model model) {
-		Todo todo = service.getTodo(id);
-		model.addAttribute("todo", todo);
+	public String edit(@PathVariable("id") Integer id, Model model) {
+		Estado estado = estadoService.pesquisar(id);
+		model.addAttribute("todo", estado);
 		return "todos/edit";
 	}
 	
 	@RequestMapping(value = "/todos/update", method = RequestMethod.POST)
-	public String update(Model model, Todo todo) {
-		service.update(todo);
+	public String update(Model model, Estado estado) {
+		estadoService.atualizar(estado);
 		return "redirect:/todos/list";
 	}
-	
-	public TodoService getService() {
-		return service;
-	}
-
-	public void setService(TodoService service) {
-		this.service = service;
-	}
-	
 }

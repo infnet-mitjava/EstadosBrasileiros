@@ -10,8 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import br.edu.infnet.todoapp.app.model.Todo;
 import br.edu.infnet.todoapp.app.model.persistence.TodoDao;
-import br.edu.infnet.todoapp.app.model.persistence.UsuarioDao;
-
 
 
 @Service
