@@ -1,4 +1,4 @@
-package br.edu.infnet.todoapp.app.model;
+package br.com.estados.model;
 
 import java.io.Serializable;
 

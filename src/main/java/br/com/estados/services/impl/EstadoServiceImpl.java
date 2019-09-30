@@ -1,4 +1,4 @@
-package br.edu.infnet.todoapp.app.services.impl;
+package br.com.estados.services.impl;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.edu.infnet.todoapp.app.model.Estado;
-import br.edu.infnet.todoapp.app.model.persistence.EstadoDao;
-import br.edu.infnet.todoapp.app.services.EstadoService;
+import br.com.estados.model.Estado;
+import br.com.estados.model.persistence.EstadoDao;
+import br.com.estados.services.EstadoService;
 
 @Service
 public class EstadoServiceImpl implements EstadoService {

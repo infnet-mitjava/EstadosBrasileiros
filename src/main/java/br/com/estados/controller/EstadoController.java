@@ -1,4 +1,4 @@
-package br.edu.infnet.todoapp.app.controller;
+package br.com.estados.controller;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import br.edu.infnet.todoapp.app.model.Estado;
-import br.edu.infnet.todoapp.app.services.EstadoService;
+import br.com.estados.model.Estado;
+import br.com.estados.services.EstadoService;
 
 @Controller
 public class EstadoController {

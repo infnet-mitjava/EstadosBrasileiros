@@ -1,4 +1,4 @@
-package br.edu.infnet.todoapp;
+package br.com.estados;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

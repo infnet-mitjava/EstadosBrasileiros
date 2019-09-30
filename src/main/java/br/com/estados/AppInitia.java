@@ -1,4 +1,4 @@
-package br.edu.infnet.todoapp;
+package br.com.estados;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;

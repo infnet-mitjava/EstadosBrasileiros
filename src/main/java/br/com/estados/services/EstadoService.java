@@ -1,8 +1,8 @@
-package br.edu.infnet.todoapp.app.services;
+package br.com.estados.services;
 
 import java.util.List;
 
-import br.edu.infnet.todoapp.app.model.Estado;
+import br.com.estados.model.Estado;
 
 
 public interface EstadoService {

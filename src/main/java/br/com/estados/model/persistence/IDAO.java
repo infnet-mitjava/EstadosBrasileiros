@@ -1,4 +1,4 @@
-package br.edu.infnet.todoapp.app.model.persistence;
+package br.com.estados.model.persistence;
 
 import java.util.List;
 
