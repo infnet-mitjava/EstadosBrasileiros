@@ -5,6 +5,5 @@
 	version="2.0">
 	<persistence-unit name="mitjava">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<class>br.edu.infnet.todoapp.app.model.Todo</class>
 	</persistence-unit>
 </persistence>
