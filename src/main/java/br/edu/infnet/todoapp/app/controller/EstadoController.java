@@ -21,7 +21,7 @@ public class EstadoController {
 	@RequestMapping(value = "/todos/list", method = RequestMethod.GET)
 	public String listar(Model model) {
 		List<Estado> estados= estadoService.listar();
-		model.addAttribute("listaTodos", estados);
+		model.addAttribute("listaEstados", estados);
 		return "todos/list";
 	}
 	
@@ -40,7 +40,7 @@ public class EstadoController {
 	@RequestMapping(value = "/todos/edit/{id}", method = RequestMethod.GET)
 	public String edit(@PathVariable("id") Integer id, Model model) {
 		Estado estado = estadoService.pesquisar(id);
-		model.addAttribute("todo", estado);
+		model.addAttribute("estado", estado);
 		return "todos/edit";
 	}
 	
