@@ -49,4 +49,12 @@ public class EstadoController {
 		estadoService.atualizar(estado);
 		return "redirect:/estados/list";
 	}
+	
+	@RequestMapping(value = "/estados/deletar/{id}", method = RequestMethod.GET)
+	public String delete(@PathVariable("id") Integer id, Model model) {
+		estadoService.deletar(id);
+		List<Estado> estados= estadoService.listar();
+		model.addAttribute("listaEstados", estados);
+		return "estados/list";
+	}
 }

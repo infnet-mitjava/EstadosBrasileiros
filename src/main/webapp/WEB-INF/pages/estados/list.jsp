@@ -5,49 +5,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/main.css" />" >
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css"
+	href="<c:url value="/resources/css/main.css" />">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
 
 <meta charset="UTF-8">
 <title>Listagem</title>
 </head>
 <body>
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Home</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarTogglerDemo02"
+				aria-controls="navbarTogglerDemo02" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-  <div class="container" >
-	
-	<h4>Listagem de estados</h4>
-	<h3><a href="<c:url value="/todos/form" />" class="btn btn-primary">Novo +</a></h3>
-	
-	<table class="table" >
-	   <thead>
-		<tr>
-			<th>Estado</th>
-			<th>UF</th>
-			<th>Ação</th>
-		</tr>
-	<thead>
-	<tbody>
-		<c:forEach var="estado" items="${listaEstados}" >
-			<tr>
-				<td>${estado.name}</td>
-				<td>${estado.uf}</td>
-	<td>
-	
-	<a href="<c:url value="/todos/edit/${estado.id}" />" class="btn btn-warning">Edit</a>
-	|
-	<a href="<c:url value="/todos/edit/${estado.id}" />" class="btn btn-danger">Delete</a>
-	
-	
-	</td>
-			</tr>
-		</c:forEach>
-		</tbody>
-	</table>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+					<li class="nav-item active"><a class="nav-link"
+						href="<c:url value="/estados/list" />">Listar <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="<c:url value="/estados/form" />">Novo
+							+ <span class="sr-only">(current)</span>
+					</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div style="text-align: center"><h5>Listagem de estados</h5></div>
+		<div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Estado</th>
+					<th>UF</th>
+					<th>Ação</th>
+				</tr>
+			<thead>
+			<tbody>
+				<c:forEach var="estado" items="${listaEstados}">
+					<tr>
+						<td>${estado.name}</td>
+						<td>${estado.uf}</td>
+						<td><a href="<c:url value="/estados/edit/${estado.id}" />"
+							class="btn btn-warning">Edit</a> | <a
+							href="<c:url value="/estados/deletar/${estado.id}" />"
+							class="btn btn-danger">Delete</a></td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+		</div>
+	</div>
 
-</div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
 </body>
 </html>
