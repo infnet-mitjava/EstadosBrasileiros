@@ -12,8 +12,8 @@
 
 	<div class="container-fluid">
 
-		<h2>Hello World!</h2>
-		<a href="todos/list">Todos</a> <br /> <a href="todos/form">Criar nova tarefa</a>
+		<h2>Sistema de gerenciamento de estados brasileiros!</h2>
+		<a href="estados/list">Listar</a> <br /> <a href="estados/form">Novo +</a>
 
 	</div>
 
